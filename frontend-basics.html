@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Frontend Basics | Francesco Foresta</title>
+
+    <meta
+      name="description"
+      content="Esercitazione HTML con un form di registrazione per un'app di streaming musicale."
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <body>
+    <main class="container form-page">
+      <nav class="tabs" aria-label="Esercitazioni">
+        <a class="tab" href="index.html">HTML Basics</a>
+        <a class="tab active" href="frontend-basics.html" aria-current="page">Frontend Basics</a>
+      </nav>
+
+      <header class="form-header">
+        <p class="eyebrow">Frontend Basics</p>
+        <h1>Crea il tuo profilo musicale</h1>
+        <p>Registrati e raccontaci quali generi vuoi ascoltare.</p>
+      </header>
+
+      <form
+        onsubmit="
+          event.preventDefault();
+          alert('Registrazione inviata!');
+        "
+      >
+        <fieldset>
+          <legend>Dati personali</legend>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" autocomplete="given-name" required />
+            </div>
+
+            <div class="form-field">
+              <label for="cognome">Cognome</label>
+              <input type="text" id="cognome" name="cognome" autocomplete="family-name" required />
+            </div>
+
+            <div class="form-field full-width">
+              <label for="email">Indirizzo email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                autocomplete="new-password"
+                minlength="8"
+                required
+              />
+            </div>
+
+            <div class="form-field">
+              <label for="data-nascita">Data di nascita</label>
+              <input type="date" id="data-nascita" name="data-nascita" required />
+            </div>
+
+            <div class="form-field full-width">
+              <label for="telefono">Numero di telefono</label>
+              <input
+                type="number"
+                id="telefono"
+                name="telefono"
+                autocomplete="tel"
+                placeholder="Es. 3793878080"
+                required
+              />
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Gusti musicali</legend>
+          <p class="field-help">Seleziona uno o più generi.</p>
+
+          <div class="choice-grid">
+            <label class="choice"><input type="checkbox" name="generi" value="pop" /> Pop</label>
+            <label class="choice"><input type="checkbox" name="generi" value="rock" /> Rock</label>
+            <label class="choice"><input type="checkbox" name="generi" value="jazz" /> Jazz</label>
+            <label class="choice"
+              ><input type="checkbox" name="generi" value="elettronica" /> Elettronica</label
+            >
+            <label class="choice"
+              ><input type="checkbox" name="generi" value="classica" /> Classica</label
+            >
+            <label class="choice"
+              ><input type="checkbox" name="generi" value="hip-hop" /> Hip hop</label
+            >
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Termini e condizioni</legend>
+          <label class="terms-choice">
+            <input type="radio" name="termini" value="accettati" required />
+            Accetto i termini e le condizioni del servizio
+          </label>
+        </fieldset>
+
+        <button type="submit">Invia registrazione</button>
+      </form>
+    </main>
+  </body>
+</html>
