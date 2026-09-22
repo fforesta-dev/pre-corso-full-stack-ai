@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone | Flexbox Basics</title>
+    <link rel="stylesheet" href="youtube-clone.css" />
+  </head>
+  <body>
+    <nav class="exercise-tabs" aria-label="Esercitazioni">
+      <a href="../index.html">HTML Basics</a>
+      <a href="../frontend-basics.html">Frontend Basics</a>
+      <a href="../css-basics/index.html">CSS Basics</a>
+      <a class="active" href="index.html" aria-current="page">YouTube Clone</a>
+    </nav>
+
+    <div class="youtube-shell">
+      <aside class="sidebar" aria-label="Navigazione YouTube">
+        <button class="sidebar-item menu-button" type="button" aria-label="Apri menu">
+          <ion-icon name="menu-sharp"></ion-icon>
+        </button>
+        <a class="sidebar-item active" href="#">
+          <ion-icon name="home-outline"></ion-icon>
+          <span>Home</span>
+        </a>
+        <a class="sidebar-item" href="#">
+          <ion-icon name="compass-outline"></ion-icon>
+          <span>Esplora</span>
+        </a>
+        <a class="sidebar-item" href="#">
+          <ion-icon name="albums-outline"></ion-icon>
+          <span>Raccolta</span>
+        </a>
+      </aside>
+
+      <div class="main">
+        <header class="topbar">
+          <img class="youtube-logo" src="assets/yt-logo.svg" alt="YouTube" />
+
+          <div class="search-wrapper">
+            <label class="visually-hidden" for="video-search">Cerca su YouTube</label>
+            <input id="video-search" type="search" placeholder="Cerca" />
+            <button class="search-button" type="button" aria-label="Cerca">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+            <button class="round-button" type="button" aria-label="Ricerca vocale">
+              <ion-icon name="mic-sharp"></ion-icon>
+            </button>
+          </div>
+
+          <div class="topbar-actions">
+            <button type="button" aria-label="Crea video">
+              <ion-icon name="videocam-outline"></ion-icon>
+            </button>
+            <button type="button" aria-label="Notifiche">
+              <ion-icon name="notifications-outline"></ion-icon>
+            </button>
+            <button type="button" aria-label="Profilo">
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </button>
+          </div>
+        </header>
+
+        <main class="content">
+          <h1 class="visually-hidden">Video consigliati</h1>
+          <div class="video-grid">
+            <article class="video-card">
+              <a class="thumbnail-link" href="#" aria-label="Guarda Corso Web Developer 2026">
+                <img src="assets/epicode_thumb.png" alt="EPICODE Web Developer" />
+                <span class="duration">12:48</span>
+              </a>
+              <div class="video-info">
+                <img class="channel-avatar" src="assets/epicode-logo.png" alt="" />
+                <div>
+                  <h2><a href="#">Corso Web Developer 2026: da zero al tuo primo sito</a></h2>
+                  <p>EPICODE</p>
+                  <p>18.000 visualizzazioni · 2 giorni fa</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a class="thumbnail-link" href="#" aria-label="Guarda HTML per principianti">
+                <img src="assets/epicode_thumb.png" alt="EPICODE Web Developer" />
+                <span class="duration">18:21</span>
+              </a>
+              <div class="video-info">
+                <img class="channel-avatar" src="assets/epicode-logo.png" alt="" />
+                <div>
+                  <h2><a href="#">HTML per principianti: struttura la tua prima pagina</a></h2>
+                  <p>EPICODE</p>
+                  <p>24.000 visualizzazioni · 5 giorni fa</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a class="thumbnail-link" href="#" aria-label="Guarda CSS e Flexbox">
+                <img src="assets/epicode_thumb.png" alt="EPICODE Web Developer" />
+                <span class="duration">22:05</span>
+              </a>
+              <div class="video-info">
+                <img class="channel-avatar" src="assets/epicode-logo.png" alt="" />
+                <div>
+                  <h2><a href="#">CSS e Flexbox: crea layout moderni e responsive</a></h2>
+                  <p>EPICODE</p>
+                  <p>31.000 visualizzazioni · 1 settimana fa</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a
+                class="thumbnail-link"
+                href="#"
+                aria-label="Guarda Come diventare Full Stack Developer"
+              >
+                <img src="assets/epicode_thumb.png" alt="EPICODE Web Developer" />
+                <span class="duration">09:37</span>
+              </a>
+              <div class="video-info">
+                <img class="channel-avatar" src="assets/epicode-logo.png" alt="" />
+                <div>
+                  <h2><a href="#">Come diventare Full Stack Developer: la roadmap</a></h2>
+                  <p>EPICODE</p>
+                  <p>42.000 visualizzazioni · 2 settimane fa</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a class="thumbnail-link" href="#" aria-label="Guarda JavaScript spiegato semplice">
+                <img src="assets/epicode_thumb.png" alt="EPICODE Web Developer" />
+                <span class="duration">16:14</span>
+              </a>
+              <div class="video-info">
+                <img class="channel-avatar" src="assets/epicode-logo.png" alt="" />
+                <div>
+                  <h2><a href="#">JavaScript spiegato semplice: variabili e funzioni</a></h2>
+                  <p>EPICODE</p>
+                  <p>37.000 visualizzazioni · 3 settimane fa</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="video-card">
+              <a class="thumbnail-link" href="#" aria-label="Guarda Il tuo primo progetto frontend">
+                <img src="assets/epicode_thumb.png" alt="EPICODE Web Developer" />
+                <span class="duration">25:42</span>
+              </a>
+              <div class="video-info">
+                <img class="channel-avatar" src="assets/epicode-logo.png" alt="" />
+                <div>
+                  <h2><a href="#">Il tuo primo progetto frontend completo</a></h2>
+                  <p>EPICODE</p>
+                  <p>56.000 visualizzazioni · 1 mese fa</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
